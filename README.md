@@ -9,3 +9,8 @@ https://www.abuseipdb.com/categories
 * a copy of windows and a computer
 * an API key
 * a keyboard(and maybe a mouse)
+## setup
+change variable
+
+    API_KEY = '00000000000000000000000000'
+to your apikey
