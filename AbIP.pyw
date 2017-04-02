@@ -2,28 +2,25 @@ from tkinter import *
 from tkinter import ttk
 import requests
 import time
-'''
 
-
-
-'''
 
 def send():
     try:
         status.set("sending")
         root.update_idletasks()
-        ipvalue = str(ip_address.get())
-        value = str(categories.get())
-        commentval = str(COMMENT.get())
-        r = requests.get('https://www.abuseipdb.com/report/json?key=' + API_KEY + '&category=' + value + '&comment=' + commentval + '&ip=' + ipvalue)
-        #print('https://www.abuseipdb.com/report/json?key=' + API_KEY + '&category=' + value + '&comment=' + commentval + '&ip=' + ipvalue)
+        ip_value = str(ip_address.get())
+        cat_value = str(categories.get())
+        comment_value = str(COMMENT.get())
+        url = 'https://www.abuseipdb.com/report/json?key='
+        requests.get(url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value)
+        # print(url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value)
         time.sleep(2)
-        r.text
         exit()
     except ValueError:
         pass
 
-API_KEY = '00000000000000000000000000'
+
+api_key = 'L8f285v7BXPiy6giQ3dy6s2KwtqDTnAmqBfAw4u3'
 root = Tk()
 root.title("abuseIPdb")
 root.iconbitmap('favicon.ico')
@@ -50,7 +47,8 @@ ttk.Label(mainframe, text="comment").grid(column=1, row=4, sticky=W)
 ttk.Label(mainframe, text="IPV4").grid(column=3, row=2, sticky=W)
 ttk.Label(mainframe, text="status").grid(column=1, row=3, sticky=W)
 ttk.Label(mainframe, text="categories").grid(column=1, row=1, sticky=W)
-for child in mainframe.winfo_children(): child.grid_configure(padx=5, pady=5)
+for child in mainframe.winfo_children():
+    child.grid_configure(padx=5, pady=5)
 
 ip_address_entry.focus()
 categories_entry.focus()
