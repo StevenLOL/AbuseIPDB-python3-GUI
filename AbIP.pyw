@@ -8,7 +8,7 @@ import time
 
 '''
 
-def send(*args):
+def send():
     try:
         status.set("sending")
         root.update_idletasks()
