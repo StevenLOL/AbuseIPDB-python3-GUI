@@ -17,7 +17,7 @@ def test_send():
         print(final_value)
     except ValueError:
         pass
-    assert final_value = "https://www.abuseipdb.com/report/json?key=0000000000000000000000000000&category=1&comment=1&ip=1"
+    assert final_value == "https://www.abuseipdb.com/report/json?key=0000000000000000000000000000&category=1&comment=1&ip=1"
 
 api_key = '0000000000000000000000000000'
 root = Tk()
