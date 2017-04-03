@@ -4,9 +4,9 @@ import requests
 import time
 
 
-def test_send():
+def test_test_send():
     try:
-        status.set("sending")
+        status.set("test_sending")
         root.update_idletasks()
         ip_value = str("1")
         cat_value = str("1")
@@ -40,7 +40,7 @@ COMMENT_entry = ttk.Entry(mainframe, width=20, textvariable=COMMENT)
 COMMENT_entry.grid(column=2, row=4, sticky=(W, E))
 status.set("waiting")
 ttk.Label(mainframe, textvariable=status).grid(column=2, row=3, sticky=(W, E))
-ttk.Button(mainframe, text="send", command=send).grid(column=3, row=3, sticky=W)
+ttk.Button(mainframe, text="test_send", command=test_send).grid(column=3, row=3, sticky=W)
 ttk.Label(mainframe, text="IP to report").grid(column=1, row=2, sticky=W)
 ttk.Label(mainframe, text="comment").grid(column=1, row=4, sticky=W)
 ttk.Label(mainframe, text="IPV4").grid(column=3, row=2, sticky=W)
@@ -52,7 +52,7 @@ for child in mainframe.winfo_children():
 ip_address_entry.focus()
 categories_entry.focus()
 COMMENT_entry.focus()
-root.bind('<Return>', send)
+root.bind('<Return>', test_send)
 
 root.mainloop()
 
