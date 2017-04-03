@@ -20,7 +20,7 @@ def send():
         pass
 
 
-api_key = 'L8f285v7BXPiy6giQ3dy6s2KwtqDTnAmqBfAw4u3'
+api_key = '0000000000000000000000000000'
 root = Tk()
 root.title("abuseIPdb")
 #root.iconbitmap('favicon.ico')
