@@ -1,5 +1,7 @@
 # AbuseIPDB-python3-GUI
 
+[![Build Status](https://travis-ci.org/growmaster420/AbuseIPDB-python3-GUI.svg?branch=master)](https://travis-ci.org/growmaster420/AbuseIPDB-python3-GUI)
+
 https://www.abuseipdb.com/
 
 https://www.abuseipdb.com/categories
