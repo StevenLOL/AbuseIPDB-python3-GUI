@@ -1,2 +1,2 @@
-python3-tk
+python-tk
 requests
