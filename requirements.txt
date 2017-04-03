@@ -1,2 +1,2 @@
-tkinter
+python3-tk
 requests
