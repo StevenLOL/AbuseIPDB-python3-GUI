@@ -12,8 +12,9 @@ def send():
         cat_value = str(categories.get())
         comment_value = str(COMMENT.get())
         url = 'https://www.abuseipdb.com/report/json?key='
-        requests.get(url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value)
-        # print(url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value)
+        final_value = url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value
+        requests.get(final_value)
+        print(final_value)
         time.sleep(2)
         exit()
     except ValueError:
