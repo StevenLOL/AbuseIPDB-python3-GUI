@@ -54,5 +54,5 @@ ip_address_entry.focus()
 categories_entry.focus()
 COMMENT_entry.focus()
 root.bind('<Return>', send)
-root.after(10000, root.destroy, exit(0))
+root.after(10000, send(), root.destroy, exit(0))  # testing
 root.mainloop()
