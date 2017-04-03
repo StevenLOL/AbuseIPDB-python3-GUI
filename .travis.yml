@@ -8,3 +8,5 @@ install: "pip install -r requirements.txt"
 # command to run tests
 script: pytest
 
+before_install:
+  - sudo apt-get install python3-tk
