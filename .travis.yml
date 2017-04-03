@@ -7,6 +7,7 @@ python:
 env:
   - DISPLAY=:99.0
 before_install:
+  - sudo pip3 install requests
   - sudo apt-get install python3-tk -y
   - sh -e /etc/init.d/xvfb start
 script: pytest
