@@ -23,7 +23,7 @@ def send():
 api_key = 'L8f285v7BXPiy6giQ3dy6s2KwtqDTnAmqBfAw4u3'
 root = Tk()
 root.title("abuseIPdb")
-root.iconbitmap('favicon.ico')
+#root.iconbitmap('favicon.ico')
 mainframe = ttk.Frame(root, padding="4 3 12 12")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 mainframe.columnconfigure(0, weight=1)
