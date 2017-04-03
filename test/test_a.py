@@ -4,7 +4,8 @@ import requests
 import time
 
 
-def send():
+
+def test_send():
     try:
         status.set("sending")
         root.update_idletasks()
@@ -12,8 +13,8 @@ def send():
         cat_value = str(categories.get())
         comment_value = str(COMMENT.get())
         url = 'https://www.abuseipdb.com/report/json?key='
-        requests.get(url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value)
-        # print(url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value)
+        #requests.get(url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value)
+        print(url + api_key + '&category=' + cat_value + '&comment=' + comment_value + '&ip=' + ip_value)
         time.sleep(2)
         exit()
     except ValueError:
@@ -41,7 +42,7 @@ COMMENT_entry = ttk.Entry(mainframe, width=20, textvariable=COMMENT)
 COMMENT_entry.grid(column=2, row=4, sticky=(W, E))
 status.set("waiting")
 ttk.Label(mainframe, textvariable=status).grid(column=2, row=3, sticky=(W, E))
-ttk.Button(mainframe, text="send", command=send).grid(column=3, row=3, sticky=W)
+ttk.Button(mainframe, text="send", command=test_send).grid(column=3, row=3, sticky=W)
 ttk.Label(mainframe, text="IP to report").grid(column=1, row=2, sticky=W)
 ttk.Label(mainframe, text="comment").grid(column=1, row=4, sticky=W)
 ttk.Label(mainframe, text="IPV4").grid(column=3, row=2, sticky=W)
@@ -53,6 +54,6 @@ for child in mainframe.winfo_children():
 ip_address_entry.focus()
 categories_entry.focus()
 COMMENT_entry.focus()
-root.bind('<Return>', send)
+root.bind('<Return>', test_send)
 #root.after(10000, send(), root.destroy, exit(0))  # testing
 root.mainloop()
