@@ -10,5 +10,5 @@ before_install:
   - sudo apt-get install python3-tk -y
   - pip3 install requests
   - sh -e /etc/init.d/xvfb start
-script: py.test test_a.py
+script: py.test test/test_a.py
 
