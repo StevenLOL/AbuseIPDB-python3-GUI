@@ -8,11 +8,11 @@ https://www.abuseipdb.com/categories
 
 ## requirements 
 * python3 python3-requests python3-tkinter
-* a copy of windows and a computer
+* a computer(windows or linux)
 * an API key
 * a keyboard(and maybe a mouse)
 ## setup
 change variable
 
-    API_KEY = '00000000000000000000000000'
-to your apikey
+    API_KEY = 'place_your_apikey_here'
+
